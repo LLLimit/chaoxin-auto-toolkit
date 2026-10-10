@@ -3,7 +3,7 @@
 
 # 超星视频学习任务（Ubuntu 24.04）
 
-使用宝塔面板、已取得 auth.json：请优先按 [宝塔部署说明](BAOTA.md) 操作。
+使用宝塔面板、已取得 auth.json：请优先按 [宝塔部署说明]([BAOTA.md](https://github.com/LLLimit/chaoxin-auto-toolkit/blob/main/BAOTA.md)) 操作。
 
 每天通过平台正常播放按钮播放视频，读取实际到账积分，到15分停止。支持多个账号同时运行，账号间分开浏览器进程、登录会话、数据库和 systemd 服务。当前配置只包含你的 `me` 账号。
 
