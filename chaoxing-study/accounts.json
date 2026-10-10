@@ -1,0 +1,24 @@
+{
+  "accounts": {
+    "me": {
+      "home_url": "https://tsjy.chaoxing.com/plaza/?courseId=257060911&personId=517766188&classId=131883866&userId=402183245",
+      "target_points": 15,
+      "headless": true,
+      "score_interval_seconds": 60,
+      "no_gain_seconds": 240,
+      "max_run_minutes": 45,
+      "max_catalog_pages": 100,
+      "max_no_gain_courses": 3
+    },
+    "friend1": {
+  "home_url": "https://tsjy.chaoxing.com/plaza/?courseId=257060911&personId=517766184&classId=131883866&userId=402183249",
+  "target_points": 15,
+  "headless": true
+    },
+    "friend2": {
+  "home_url": "https://tsjy.chaoxing.com/plaza/?courseId=257060911&personId=517766187&classId=131883866&userId=402183246",
+  "target_points": 15,
+  "headless": true
+    }
+  }
+}

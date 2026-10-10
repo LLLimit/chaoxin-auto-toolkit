@@ -1,0 +1,31 @@
+[Unit]
+Description=Chaoxing normal playback worker for %i
+Wants=network-online.target
+After=network-online.target
+StartLimitIntervalSec=24h
+StartLimitBurst=3
+
+[Service]
+Type=oneshot
+User=chaoxing-study
+Group=chaoxing-study
+WorkingDirectory=/opt/chaoxing-study
+Environment=PYTHONUNBUFFERED=1
+Environment=PLAYWRIGHT_BROWSERS_PATH=/opt/chaoxing-study/browsers
+ExecStart=/opt/chaoxing-study/.venv/bin/python /opt/chaoxing-study/worker.py run %i
+TimeoutStartSec=140min
+TimeoutStopSec=20s
+KillMode=control-group
+Restart=on-failure
+RestartSec=120s
+RestartPreventExitStatus=2 3 4 6 130
+OOMPolicy=stop
+MemoryAccounting=yes
+MemoryHigh=600M
+MemoryMax=750M
+CPUAccounting=yes
+CPUWeight=100
+TasksMax=256
+UMask=0077
+PrivateTmp=yes
+
