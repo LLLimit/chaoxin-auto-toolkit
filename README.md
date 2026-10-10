@@ -65,7 +65,7 @@ sudo install -d -o chaoxing-study -g chaoxing-study -m 0700 /opt/chaoxing-study/
 sudo install -o chaoxing-study -g chaoxing-study -m 0600 ~/me-auth.json /opt/chaoxing-study/data/me/auth.json
 ```
 
-程序运行时启用 Chromium sandbox。安装脚本会为固定版本 headless shell 的确切路径安装 AppArmor `userns` 许可，并运行空白页启动检查；浏览器缓存和项目目录由 root 管理，运行账号只写入 data。它不会更改全局内核设置。旧安装遇到 `No usable sandbox` 且内核日志出现 `unprivileged_userns` 拒绝时，按 [宝塔部署说明](BAOTA.md) 的修复步骤处理。
+程序运行时启用 Chromium sandbox。安装脚本会为固定版本 headless shell 的确切路径安装 AppArmor `userns` 许可，并运行空白页启动检查；浏览器缓存和项目目录由 root 管理，运行账号只写入 data。它不会更改全局内核设置。旧安装遇到 `No usable sandbox` 且内核日志出现 `unprivileged_userns` 拒绝时，按 [宝塔部署说明](https://github.com/LLLimit/chaoxin-auto-toolkit/blob/main/BAOTA.md) 的修复步骤处理。
 
 ## 第三步：先验收，再设置每天运行
 
@@ -123,7 +123,7 @@ sudo systemctl stop chaoxing-study@me.service
 
 ## 扩展到多个账号并行
 
-服务器可用 `import_account.py` 添加新账号，无需手动合并配置；完整命令见 [宝塔部署说明第5节](BAOTA.md)。导入仅添加数据，不自动开启浏览器或计划任务。当前1GB服务器先单独验收每个账号；扩容后再从两个账号开始并发验收。
+服务器可用 `import_account.py` 添加新账号，无需手动合并配置；完整命令见 [宝塔部署说明第5节](https://github.com/LLLimit/chaoxin-auto-toolkit/blob/main/BAOTA.md) 。导入仅添加数据，不自动开启浏览器或计划任务。当前1GB服务器先单独验收每个账号；扩容后再从两个账号开始并发验收。
 
 每位账号持有人在自己的电脑用新的账号标识登录，例如 `friend1`。先在各自 `accounts.json` 增加配置，`home_url` 必须来自该账号自己的课程首页；不能复制你的 personId/userId 给同学。其他参数可以复制 `me` 的值。
 
